@@ -1,0 +1,31 @@
+# El catálogo oficial de módulos de telar (https://github.com/nicorivas/telar): lo que se mergea aquí, lo revisó
+# quien mantiene telar. El formato, en docs/modulos.md de telar. Para sumar uno: `telar modulos publicar`.
+version = 1
+
+[modulos.grafo]
+descripcion = "El grafo de conocimiento de tus repositorios: las conexiones de cada documento, para encontrar y entender antes de buscar por texto."
+fuente = "https://github.com/nicorivas/telar-grafo"
+version = "v0.1.0"
+autor = "nicorivas"
+etiquetas = ["conocimiento", "grafo", "agentes", "documentos"]
+telar = ">=0.6"
+
+[modulos.grafo.permisos]
+leer = ["los repositorios de [repos] (sus .md)", "~/.claude/projects (solo `uso`: las conversaciones de Claude Code)"]
+escribir = ["~/.cache/telar-grafo"]
+red = false
+ordenes = []
+
+[modulos.nino34]
+descripcion = "La temperatura del mar en Niño 3.4 y el mapa del Pacífico, en una pestaña del dashboard, cada mañana."
+fuente = "https://github.com/nicorivas/telar-nino34"
+version = "v0.1.0"
+autor = "nicorivas"
+etiquetas = ["clima", "datos", "pestaña", "periódico"]
+telar = ">=0.6"
+
+[modulos.nino34.permisos]
+leer = []
+escribir = ["~/.local/state/nino34"]
+red = ["climatereanalyzer.org", "www.ncei.noaa.gov", "pypi.org (uv, para el mapa)"]
+ordenes = []

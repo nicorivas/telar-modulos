@@ -1,0 +1,14 @@
+# Revisa el catálogo en cada PR: que se lea, y que cada módulo, en su versión, sea lo que el catálogo dice.
+name: revisar
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: telar modulos revisar --catalogo --resolver
+        run: uvx --from 'telar>=0.6' telar modulos revisar --catalogo .telar/catalogo.toml --resolver
