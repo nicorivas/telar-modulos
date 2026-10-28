@@ -36,7 +36,7 @@ fuente = "https://github.com/nicorivas/telar-gantt"
 version = "v0.1.0"
 autor = "Nicolás Rivas"
 etiquetas = ["proyectos", "gantt", "fechas", "pestaña"]
-telar = ">=0.8"
+telar = ">=0.8.1"
 
 [modulos.gantt.permisos]
 escribir = ["~/.local/state/telar-gantt"]
