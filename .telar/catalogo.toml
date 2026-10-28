@@ -29,3 +29,16 @@ leer = []
 escribir = ["~/.local/state/nino34"]
 red = ["climatereanalyzer.org", "www.ncei.noaa.gov", "pypi.org (uv, para el mapa)"]
 ordenes = []
+
+[modulos.gantt]
+descripcion = "Los proyectos en el tiempo: la barra de cada uno, sus actividades, hitos y sesiones, y tus tareas, con lo que diga telar fechas."
+fuente = "https://github.com/nicorivas/telar-gantt"
+version = "v0.1.0"
+autor = "Nicolás Rivas"
+etiquetas = ["proyectos", "gantt", "fechas", "pestaña"]
+telar = ">=0.8"
+
+[modulos.gantt.permisos]
+escribir = ["~/.local/state/telar-gantt"]
+red = false
+ordenes = ["fecha", "fechas", "proyectos"]
